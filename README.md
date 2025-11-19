@@ -1,70 +1,148 @@
-# Getting Started with Create React App
+🌟 FakeStore E-Commerce Web App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive e-commerce web application built with React, Redux Toolkit, and FakeStore API.
 
-## Available Scripts
+📖 Overview
 
-In the project directory, you can run:
+FakeStore E-Commerce is a fully functional shopping platform that showcases product listing, filtering, searching, cart management, pagination, and persistent cart data — all powered by FakeStore API and Redux Toolkit.
 
-### `npm start`
+This project is built to demonstrate real-world industry-level frontend development structure and coding patterns.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+🚀 Features
+🛍 Product Listing
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Display all products fetched from FakeStore API
 
-### `npm test`
+Responsive grid UI
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Product image, title, price, category
 
-### `npm run build`
+🔍 Search & Filters
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Search by product name
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Filter by category
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Filter by max price
 
-### `npm run eject`
+Fully reactive filter system
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+📄 Product Details
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Full product information
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Rating, category, description
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Add to Cart button
 
-## Learn More
+🛒 Shopping Cart
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Increase / decrease quantity
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Remove items
 
-### Code Splitting
+Clear cart
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Auto-calculated totals
 
-### Analyzing the Bundle Size
+💾 Persistent Cart
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Cart is saved in localStorage
 
-### Making a Progressive Web App
+Reloads automatically on page refresh
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+📑 Pagination
 
-### Advanced Configuration
+8 products per page
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Prev / Next navigation
 
-### Deployment
+Autoreset on filter change
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+⚠ Loading & Error UI
 
-### `npm run build` fails to minify
+Loader during API fetch
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Error UI in case of failure
+
+🧰 Tech Stack
+Technology	Purpose
+React	UI components
+Redux Toolkit	Global state management
+React Router	Navigation
+Axios	API requests
+FakeStore API	Product data
+CSS	Styling & responsiveness
+📁 Folder Structure
+src/
+│
+├── components/
+│   ├── Header.js
+│   ├── ProductCard.js
+│   ├── Loader.js
+│   ├── Error.js
+│
+├── pages/
+│   ├── ProductsPage.js
+│   ├── ProductDetails.js
+│   ├── CartPage.js
+│
+├── redux/
+│   ├── store.js
+│   └── slices/
+│       ├── productsSlice.js
+│       └── cartSlice.js
+│
+├── App.js
+└── index.js
+
+🔗 API
+Base URL:
+https://fakestoreapi.com
+
+Endpoints Used
+Endpoint	Description
+/products	Get all products
+/products/:id	Get product details
+
+⚙ Installation & Setup
+1️⃣ Clone the repository
+git clone https://github.com/your-username/fake-store-ecommerce.git
+cd fake-store-ecommerce
+
+2️⃣ Install dependencies
+npm install
+
+3️⃣ Start the development server
+npm start
+
+
+Application will run at:
+
+http://localhost:3000/
+
+
+💡 How It Works
+🌀 Products
+
+Fetched via Redux async thunks:
+
+fetchProducts()
+fetchProductById(id)
+
+💾 Persistence
+
+Saved automatically with:
+
+localStorage.setItem("cartState", JSON.stringify(state.cart));
+
+👨‍💻 Author
+
+Nikhil Bhasarkar
+GitHub: https://github.com/Nikkkkillll
+
+
+⭐ Support
+
+If you like this project, please give it a ⭐ star on GitHub.
+It motivates me to create more amazing projects. 💙
